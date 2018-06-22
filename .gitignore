@@ -1,0 +1,6 @@
+app/Core/config.php
+.idea
+debug
+vendor
+1.txt
+.env

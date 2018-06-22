@@ -1,0 +1,22 @@
+{
+    "name": "yuliya_volkova/my_mvc",
+    "description": "mvc",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Yuliya Volkova",
+            "email": "Yuliyavolkova@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4":
+        {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "symfony/dotenv": "^4.1",
+        "intervention/image": "^2.4"
+    }
+}
