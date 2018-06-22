@@ -25,7 +25,7 @@ class MainController
     {
         putenv('GDFONTPATH=' . realpath(PUBLIC_PATH));
         $image = IImage::make($imageBefore);
-            $image->rotate(45)
+            $image->rotate(45, '#ffffff')
             ->text(
                 'Watermark',
                 $image->width() / 2,
