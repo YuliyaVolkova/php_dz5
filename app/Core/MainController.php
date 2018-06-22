@@ -21,7 +21,7 @@ class MainController
         $this->view->render('index', []);
     }
 
-    public function imageHandler($imageBefore, $imageAfter)
+    static function imageHandler($imageBefore, $imageAfter)
     {
         putenv('GDFONTPATH=' . realpath(PUBLIC_PATH));
         $image = IImage::make($imageBefore);
@@ -31,15 +31,16 @@ class MainController
                 $image->width() / 2,
                 $image->height() / 2,
                 function ($font) {
-                    $font->file('arial.ttf')
-                        ->size('80');
+                    $font->file(PUBLIC_PATH . DIRECTORY_SEPARATOR . 'arial.ttf')
+                        ->size('120');
                     $font->color(array(132, 198, 229, 0.5));
                     $font->align('center');
                     $font->valign('center');
                 })
-            ->resize(200, null, function ($img) {
-                $img->aspectRatio();
+            ->resize(200, null, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
             })
-            ->save($imageAfter, 100);
+            ->save($imageAfter, 90);
     }
 }

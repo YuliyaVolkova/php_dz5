@@ -13,7 +13,7 @@
         <h2>Исходная картинка:</h2>
         <img class="img" src="./public/db.jpg" alt="db" title="db">
         <h2>Преобразованная картинка:</h2>
-        <img src="./public/dbResult.jpg" alt="db" title="db">
+        <img class="img" src="./public/dbResult.jpg" alt="db" title="db">
     </div>
 </div>
 </body>
